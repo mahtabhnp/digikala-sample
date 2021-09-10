@@ -1,0 +1,39 @@
+.cardListWrapper {
+  background: #fff;
+  padding: 12px 12px 0;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 8px 13px -7px;
+  box-shadow: 0 8px 13px -7px;
+  position: relative;
+  overflow: hidden;
+}
+.cardListWrapper ul {
+  padding: 0 30px;
+  list-style: none;
+}
+.cardListWrapper li {
+  border-top: none;
+  border-bottom: 1px solid #eaeaea;
+}
+.itemWapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+.itemImage {
+  width: 100%;
+  display: block;
+  min-height: 100px;
+  text-align: center;
+  position: relative;
+}
+.noProduct {
+  text-align: right;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+}

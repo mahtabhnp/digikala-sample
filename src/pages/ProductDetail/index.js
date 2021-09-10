@@ -57,11 +57,7 @@ const ProductDetail = () => {
               <PriceConvertor value={get(product, "price.selling_price", 0)} />
             </div>
             <div className={classes.buttonWrapper}>
-              <button
-                onClick={() => {
-                  dispatch(loadCard(product));
-                }}
-              >
+              <button>
                 <p>اضافه کردن به سبد خرید</p>
                 <PlusIcon color="#fff" />
               </button>

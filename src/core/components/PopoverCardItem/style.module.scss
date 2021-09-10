@@ -3,10 +3,13 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  min-width: 300px;
 }
 .itemImage {
   width: 20%;
-  min-width: 124px;
+  min-width: 70px;
+  align-items: center;
+  padding-top: 5px;
 }
 .itemImage img {
   max-width: 100%;
@@ -30,41 +33,11 @@
   direction: rtl;
 }
 .itemTitle {
-  font-size: 16px;
-  font-size: 1.143rem;
+  font-size: 12px;
   line-height: 1.375;
   color: #3f3f3f;
   text-align: right;
   margin-bottom: 10px;
   margin-top: 6px;
   width: 100%;
-}
-.priceWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.marketable {
-  font-weight: 400;
-  font-size: 14px;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-}
-.marketable p {
-  font-size: 14px;
-  margin: 0 10px;
-}
-.orderCount {
-  font-weight: 400;
-  font-size: 14px;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-}
-.orderCount p {
-  font-size: 14px;
-  margin: 0 10px;
 }
