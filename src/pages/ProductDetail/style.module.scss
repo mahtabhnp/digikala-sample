@@ -1,0 +1,16 @@
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  overflow: unset;
+}
+.infiniteScrollWrapper div {
+  overflow: visible !important;
+}

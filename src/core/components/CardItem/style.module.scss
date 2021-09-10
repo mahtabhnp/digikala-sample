@@ -1,0 +1,83 @@
+.itemWapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemImage {
+  width: 20%;
+  min-width: 124px;
+}
+.itemImage img {
+  max-width: 100%;
+  max-height: 140px;
+}
+.itemImage a {
+  width: 100%;
+  display: block;
+  min-height: 100px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.itemInfo {
+  width: 80%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0 12px 20px 4px;
+  direction: rtl;
+}
+.itemTitle {
+  font-size: 16px;
+  font-size: 1.143rem;
+  line-height: 1.375;
+  color: #3f3f3f;
+  text-align: right;
+  margin-bottom: 10px;
+  margin-top: 6px;
+  width: 100%;
+}
+.priceWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.price {
+  color: #000;
+  letter-spacing: 0;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.429rem;
+  line-height: 1.1;
+  text-align: left;
+}
+.priceUnit {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 10px;
+}
+.marketable {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.marketable p {
+  font-size: 14px;
+  margin: 0 10px;
+}
+.orderCount {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.orderCount p {
+  font-size: 14px;
+  margin: 0 10px;
+}
