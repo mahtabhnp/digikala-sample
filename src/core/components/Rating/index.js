@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import StarIcon from "./StarIcon";
 
-const Rating = ({ rate, count }) => {
+export default function Rating({ rate, count }) {
   const classes = style;
   return (
     <div className={classes.score}>
@@ -11,5 +11,4 @@ const Rating = ({ rate, count }) => {
       <span className={classes.total}>({count})</span>
     </div>
   );
-};
-export default Rating;
+}

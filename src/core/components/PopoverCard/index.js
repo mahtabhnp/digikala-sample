@@ -5,10 +5,11 @@ import style from "./style.module.scss";
 import { getOccurrence } from "../../utils/getOccurrence";
 import PopoverCardItem from "../PopoverCardItem";
 
-const PopoverCard = () => {
+export default function PopoverCard() {
   const { card } = useSelector(({ card }) => ({
     card,
   }));
+
   const classes = style;
   return (
     <div className={classes.cardListWrapper}>
@@ -30,6 +31,4 @@ const PopoverCard = () => {
       </ul>
     </div>
   );
-};
-
-export default PopoverCard;
+}

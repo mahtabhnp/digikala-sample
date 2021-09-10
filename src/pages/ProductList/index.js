@@ -5,8 +5,9 @@ import Product from "../../core/components/Product";
 import { ShopService } from "../../core/services/shopService";
 import Loader from "../../core/components/Loader";
 import style from "./style.module.scss";
+import { Fragment } from "react";
 
-const ProductList = () => {
+export default function ProductList() {
   const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
   const [hasMore, setHasMore] = React.useState(true);
@@ -52,7 +53,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <>
+    <Fragment>
       {isLoading && <Loader />}
       {!isLoading && (
         <div className={classes.infiniteScrollWrapper}>
@@ -79,8 +80,6 @@ const ProductList = () => {
           </InfiniteScroll>
         </div>
       )}
-    </>
+    </Fragment>
   );
-};
-
-export default ProductList;
+}

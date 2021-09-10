@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { get } from "lodash";
 import { ShopService } from "../../core/services/shopService";
@@ -8,14 +8,11 @@ import LikeIcon from "../../core/components/LikeIcon";
 import Rating from "../../core/components/Rating";
 import style from "./style.module.scss";
 import PlusIcon from "../../core/components/Product/PlusIcon";
-import { useDispatch } from "react-redux";
-import { loadCard } from "../../core/redux/actions";
 
-const ProductDetail = () => {
+export default function ProductDetail() {
   const { productId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [product, setProduct] = useState({});
-  const dispatch = useDispatch();
 
   const classes = style;
 
@@ -36,7 +33,7 @@ const ProductDetail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <>
+    <Fragment>
       {isLoading && <Loader />}
       {!isLoading && (
         <article className={classes.detailWrapper}>
@@ -68,8 +65,6 @@ const ProductDetail = () => {
           </section>
         </article>
       )}
-    </>
+    </Fragment>
   );
-};
-
-export default ProductDetail;
+}

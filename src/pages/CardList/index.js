@@ -5,7 +5,7 @@ import CardItem from "../../core/components/CardItem";
 import style from "./style.module.scss";
 import { getOccurrence } from "../../core/utils/getOccurrence";
 
-const CardList = () => {
+export default function CardList() {
   const { card } = useSelector(({ card }) => ({
     card,
   }));
@@ -28,6 +28,4 @@ const CardList = () => {
       </ul>
     </div>
   );
-};
-
-export default CardList;
+}

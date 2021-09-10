@@ -12,18 +12,16 @@ export default function Popover() {
     card,
   }));
   return (
-    <>
-      <div className={classes.popoverWrapper}>
-        <Link to="/card">
-          <BasketShopIcon />
-          {get(card, "card", []).length !== 0 && (
-            <span>{[...new Set(get(card, "card", []))].length}</span>
-          )}
-        </Link>
-        <div className={classes.popoverContent}>
-          <PopoverCard />
-        </div>
+    <div className={classes.popoverWrapper}>
+      <Link to="/card">
+        <BasketShopIcon />
+        {get(card, "card", []).length !== 0 && (
+          <span>{[...new Set(get(card, "card", []))].length}</span>
+        )}
+      </Link>
+      <div className={classes.popoverContent}>
+        <PopoverCard />
       </div>
-    </>
+    </div>
   );
 }
