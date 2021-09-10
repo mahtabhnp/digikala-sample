@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { get } from "lodash";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Product from "../../core/components/Product";
 import { ShopService } from "../../core/services/shopService";
 import Loader from "../../core/components/Loader";
 import style from "./style.module.scss";
-import { Fragment } from "react";
 
 export default function ProductList() {
   const [isLoading, setIsLoading] = useState(true);
