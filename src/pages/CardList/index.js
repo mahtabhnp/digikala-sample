@@ -1,9 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { get } from "lodash";
+import { get, uniqBy } from "lodash";
 import CardItem from "../../core/components/CardItem";
 import style from "./style.module.scss";
-import { getOccurrence } from "../../core/utils/getOccurrence";
 
 export default function CardList() {
   const { card } = useSelector(({ card }) => ({
@@ -14,11 +13,10 @@ export default function CardList() {
     <div className={classes.cardListWrapper}>
       <ul>
         {get(card, "card", []).length > 0 ? (
-          [...new Set(get(card, "card", []))].map((item) => {
-            const orderCount = getOccurrence(get(card, "card", []), item.id);
+          uniqBy(get(card, "card", []), (e) => e.id).map((item) => {
             return (
               <li>
-                <CardItem data={{ ...item, orderCount }} />
+                <CardItem data={{ ...item }} />
               </li>
             );
           })

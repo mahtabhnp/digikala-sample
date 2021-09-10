@@ -8,11 +8,14 @@ import LikeIcon from "../../core/components/LikeIcon";
 import Rating from "../../core/components/Rating";
 import style from "./style.module.scss";
 import PlusIcon from "../../core/components/Product/PlusIcon";
+import { useDispatch } from "react-redux";
+import { loadCard } from "../../core/redux/actions";
 
 export default function ProductDetail() {
   const { productId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [product, setProduct] = useState({});
+  const dispatch = useDispatch();
 
   const classes = style;
 
@@ -54,7 +57,11 @@ export default function ProductDetail() {
               <PriceConvertor value={get(product, "price.selling_price", 0)} />
             </div>
             <div className={classes.buttonWrapper}>
-              <button>
+              <button
+                onClick={() => {
+                  dispatch(loadCard(product));
+                }}
+              >
                 <p>اضافه کردن به سبد خرید</p>
                 <PlusIcon color="#fff" />
               </button>

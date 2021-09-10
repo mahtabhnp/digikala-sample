@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { get } from "lodash";
+import { get, uniqBy } from "lodash";
 import style from "./style.module.scss";
 import { getOccurrence } from "../../utils/getOccurrence";
 import PopoverCardItem from "../PopoverCardItem";
@@ -15,7 +15,7 @@ export default function PopoverCard() {
     <div className={classes.cardListWrapper}>
       <ul>
         {get(card, "card", []).length > 0 ? (
-          [...new Set(get(card, "card", []))].map((item) => {
+          uniqBy(get(card, "card", []), (e) => e.id).map((item) => {
             const orderCount = getOccurrence(get(card, "card", []), item.id);
             return (
               <li>

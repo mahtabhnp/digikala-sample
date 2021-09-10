@@ -1,14 +1,18 @@
 import React from "react";
 import { get } from "lodash";
-import style from "./style.module.scss";
+import { useSelector } from "react-redux";
 import Rating from "../Rating";
 import { Link } from "react-router-dom";
 import StoreIcon from "./StoreIcon";
 import PriceConvertor from "../PriceConvertor";
+import { getOccurrence } from "../../utils/getOccurrence";
+import style from "./style.module.scss";
 
 export default function CardItem({ data }) {
+  const { card } = useSelector(({ card }) => ({
+    card,
+  }));
   const classes = style;
-
   return (
     <div className={classes.itemWrapper}>
       <div className={classes.itemImage}>
@@ -25,7 +29,9 @@ export default function CardItem({ data }) {
           </div>
         )}
         <div className={classes.orderCount}>
-          <p className={classes.count}>{get(data, "orderCount")}</p>
+          <p className={classes.count}>
+            {getOccurrence(get(card, "card", []), data.id)}
+          </p>
           <p>:آیتم های انتخاب شده</p>
         </div>
         <div className={classes.itemTitle}>
