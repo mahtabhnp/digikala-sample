@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BascketShopIcon() {
+export default function BasketShopIcon() {
   return (
     <svg
       version="1.1"

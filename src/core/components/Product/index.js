@@ -1,7 +1,7 @@
 import { get } from "lodash";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Price } from "../../utils/price";
+import PriceConvertor from "../PriceConvertor";
 import Rating from "../Rating";
 import style from "./style.module.scss";
 import PlusIcon from "./PlusIcon";
@@ -16,7 +16,7 @@ export default function Product({ data }) {
     <li>
       <div className={classes.productItem}>
         <div className={classes.card}>
-          <Link to={`/product/${data.id}`} target="_blank">
+          <Link to={`/product/${data.id}`}>
             <div></div>
             <img
               src={get(data, "images.main")}
@@ -38,10 +38,6 @@ export default function Product({ data }) {
             rate={get(data, "rating.rate")}
           />
           <div className={classes.priceWrapper}>
-            <p className={classes.priceUnit}>تومان</p>
-            <p className={classes.price}>
-              {Price(get(data, "price.selling_price"))}
-            </p>
             <button
               onClick={() => {
                 dispatch(loadCard(data));
@@ -49,8 +45,8 @@ export default function Product({ data }) {
             >
               <PlusIcon />
             </button>
+            <PriceConvertor value={get(data, "price.selling_price", 0)} />
           </div>
-          <p></p>
         </div>
       </div>
     </li>

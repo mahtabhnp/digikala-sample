@@ -1,16 +1,94 @@
-.items {
+.detailWrapper {
+  background-color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row;
+  margin-bottom: 15px;
+  width: 100%;
+  padding-top: 30px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+}
+.productGallery {
+  position: sticky;
+  top: 110px;
+  margin-bottom: 45px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -1px;
-  margin-bottom: -1px;
-  list-style: none;
-  padding: 0;
-  justify-content: center;
-  overflow: unset;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
-.infiniteScrollWrapper div {
-  overflow: visible !important;
+
+.productInfo {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  direction: rtl;
+}
+.productInfo h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.143rem;
+  line-height: 28px;
+  color: #000;
+}
+.rate {
+  align-items: center;
+  display: flex;
+  margin: 5px 0;
+}
+.rate p {
+  margin: 0 5px;
+}
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.buttonWrapper button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  border-radius: 4px;
+}
+.buttonWrapper button:hover {
+  background-color: #4de952; /* Green */
+}
+button p {
+  color: #fff;
+  margin: 4px;
 }

@@ -1,12 +1,12 @@
 /* eslint-disable array-callback-return */
 
-export const shopingActionTypes = {
+export const shoppingActionTypes = {
   LOAD_CARD: "LOAD_CARD",
 };
 
 export function loadCard(data) {
   return {
-    type: shopingActionTypes.LOAD_CARD,
+    type: shoppingActionTypes.LOAD_CARD,
     data,
   };
 }

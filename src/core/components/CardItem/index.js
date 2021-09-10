@@ -3,15 +3,15 @@ import { get } from "lodash";
 import style from "./style.module.scss";
 import Rating from "../Rating";
 import { Link } from "react-router-dom";
-import { Price } from "../../utils/price";
 import StoreIcon from "./StoreIcon";
+import PriceConvertor from "../PriceConvertor";
 
 const CardItem = ({ data }) => {
   const classes = style;
 
   return (
     <>
-      <div className={classes.itemWapper}>
+      <div className={classes.itemWrapper}>
         <div className={classes.itemImage}>
           <Link to={`/product/${data.id}`}>
             <img src={get(data, "images.main")} alt="product"></img>
@@ -36,10 +36,7 @@ const CardItem = ({ data }) => {
             />
           </div>
           <div className={classes.priceWrapper}>
-            <p className={classes.price}>
-              {Price(get(data, "price.selling_price"))}
-            </p>
-            <p className={classes.priceUnit}>تومان</p>
+            <PriceConvertor value={get(data, "price.selling_price", 0)} />
           </div>
         </div>
       </div>

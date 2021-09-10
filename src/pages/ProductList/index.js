@@ -57,7 +57,6 @@ const ProductList = () => {
       {!isLoading && (
         <div className={classes.infiniteScrollWrapper}>
           <InfiniteScroll
-            className={classes.mahtab}
             dataLength={items.length}
             next={fetchMoreData}
             hasMore={hasMore}

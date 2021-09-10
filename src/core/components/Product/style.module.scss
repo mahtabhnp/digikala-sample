@@ -44,6 +44,8 @@
 .priceWrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  direction: rtl;
 }
 .price {
   width: 100%;

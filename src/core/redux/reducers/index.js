@@ -1,4 +1,4 @@
-import { shopingActionTypes } from "../actions";
+import { shoppingActionTypes } from "../actions";
 
 export const initialState = {
   card: [],
@@ -6,7 +6,7 @@ export const initialState = {
 
 function reducers(state = initialState, action) {
   switch (action.type) {
-    case shopingActionTypes.LOAD_CARD:
+    case shoppingActionTypes.LOAD_CARD:
       return {
         ...state,
         card: [...state.card, action.data],
