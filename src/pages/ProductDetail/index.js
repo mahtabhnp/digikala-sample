@@ -35,7 +35,6 @@ const ProductDetail = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log({ product });
   return (
     <>
       {isLoading && <Loader />}
