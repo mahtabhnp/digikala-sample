@@ -49,7 +49,6 @@
 .marketable {
   font-weight: 400;
   font-size: 14px;
-  margin: 0 10px;
   display: flex;
   align-items: center;
 }
@@ -60,11 +59,16 @@
 .orderCount {
   font-weight: 400;
   font-size: 14px;
-  margin: 0 10px;
+  margin: 5px 0;
   display: flex;
   align-items: center;
+  direction: ltr;
+  justify-content: flex-end;
 }
 .orderCount p {
+  font-size: 14px;
+}
+.count {
   font-size: 14px;
   margin: 0 10px;
 }

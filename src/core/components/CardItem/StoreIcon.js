@@ -12,6 +12,7 @@ export default function StoreIcon() {
       xml="preserve"
       height="20px"
       width="20px"
+      fill="#7d7878"
     >
       <g>
         <g>

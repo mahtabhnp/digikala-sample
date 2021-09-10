@@ -25,8 +25,8 @@ export default function CardItem({ data }) {
           </div>
         )}
         <div className={classes.orderCount}>
-          <p>آیتم های انتخاب شده</p>
-          <p>{get(data, "orderCount")}</p>
+          <p className={classes.count}>{get(data, "orderCount")}</p>
+          <p>:آیتم های انتخاب شده</p>
         </div>
         <div className={classes.itemTitle}>
           <Rating
