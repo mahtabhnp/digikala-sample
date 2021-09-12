@@ -1,7 +1,7 @@
 import React from "react";
 import { get } from "lodash";
-import style from "./style.module.scss";
 import { Link } from "react-router-dom";
+import style from "./style.module.scss";
 
 export default function PopoverCardItem({ data }) {
   const classes = style;

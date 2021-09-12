@@ -6,7 +6,6 @@ import Popover from "../Popover";
 
 export default function Header() {
   const classes = style;
-
   return (
     <header className={classes.header}>
       <div className={classes.card}>

@@ -3,6 +3,6 @@ import reducers from "./reducers";
 
 export default configureStore({
   reducer: {
-    card: reducers,
+    cardReducer: reducers,
   },
 });

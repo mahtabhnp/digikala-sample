@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import style from "./style.module.scss";
 import Header from "../Header";
+import style from "./style.module.scss";
 
 export default function Rating({ children }) {
   const classes = style;

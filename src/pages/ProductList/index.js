@@ -1,9 +1,9 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { get } from "lodash";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Product from "../../core/components/Product";
-import { ShopService } from "../../core/services/shopService";
-import Loader from "../../core/components/Loader";
+import Product from "src/core/components/Product";
+import { ShopService } from "src/core/services/shopService";
+import Loader from "src/core/components/Loader";
 import style from "./style.module.scss";
 
 export default function ProductList() {

@@ -3,10 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PriceConvertor from "../PriceConvertor";
 import Rating from "../Rating";
-import style from "./style.module.scss";
 import PlusIcon from "./PlusIcon";
 import { useDispatch } from "react-redux";
-import { loadCard } from "../../redux/actions";
+import { loadCard } from "src/core/redux/actions";
+import style from "./style.module.scss";
 
 export default function Product({ data }) {
   const classes = style;

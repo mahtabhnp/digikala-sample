@@ -9,8 +9,8 @@ import { getOccurrence } from "../../utils/getOccurrence";
 import style from "./style.module.scss";
 
 export default function CardItem({ data }) {
-  const { card } = useSelector(({ card }) => ({
-    card,
+  const { card } = useSelector(({ cardReducer }) => ({
+    card: cardReducer.card,
   }));
   const classes = style;
   return (
@@ -29,9 +29,7 @@ export default function CardItem({ data }) {
           </div>
         )}
         <div className={classes.orderCount}>
-          <p className={classes.count}>
-            {getOccurrence(get(card, "card", []), data.id)}
-          </p>
+          <p className={classes.count}>{getOccurrence(card, data.id)}</p>
           <p>:آیتم های انتخاب شده</p>
         </div>
         <div className={classes.itemTitle}>

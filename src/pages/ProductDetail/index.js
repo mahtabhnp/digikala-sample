@@ -1,15 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { get } from "lodash";
-import { ShopService } from "../../core/services/shopService";
-import Loader from "../../core/components/Loader";
-import PriceConvertor from "../../core/components/PriceConvertor";
-import LikeIcon from "../../core/components/LikeIcon";
-import Rating from "../../core/components/Rating";
-import style from "./style.module.scss";
-import PlusIcon from "../../core/components/Product/PlusIcon";
+import { ShopService } from "src/core/services/shopService";
+import Loader from "src/core/components/Loader";
+import PriceConvertor from "src/core/components/PriceConvertor";
+import LikeIcon from "src/core/components/LikeIcon";
+import Rating from "src/core/components/Rating";
+import PlusIcon from "src/core/components/Product/PlusIcon";
 import { useDispatch } from "react-redux";
-import { loadCard } from "../../core/redux/actions";
+import { loadCard } from "src/core/redux/actions";
+import style from "./style.module.scss";
 
 export default function ProductDetail() {
   const { productId } = useParams();
