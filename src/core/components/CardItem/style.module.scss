@@ -68,6 +68,12 @@
 .orderCount p {
   font-size: 14px;
 }
+.orderCount button {
+  background-color: transparent;
+  border: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
 .count {
   font-size: 14px;
   margin: 0 10px;

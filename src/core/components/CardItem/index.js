@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 import StoreIcon from "./StoreIcon";
 import PriceConvertor from "../PriceConvertor";
 import { getOccurrence } from "../../utils/getOccurrence";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "src/core/redux/actions";
+import DeleteIcon from "./DeleteIcon";
 import style from "./style.module.scss";
 
 export default function CardItem({ data }) {
   const { card } = useSelector(({ cardReducer }) => ({
     card: cardReducer.card,
   }));
+  const dispatch = useDispatch();
   const classes = style;
   return (
     <div className={classes.itemWrapper}>
@@ -29,8 +33,11 @@ export default function CardItem({ data }) {
           </div>
         )}
         <div className={classes.orderCount}>
+          <button onClick={() => dispatch(deleteProduct(data.id))}>
+            <DeleteIcon />
+          </button>
+          <p>عدد</p>
           <p className={classes.count}>{getOccurrence(card, data.id)}</p>
-          <p>:آیتم های انتخاب شده</p>
         </div>
         <div className={classes.itemTitle}>
           <Rating
@@ -38,6 +45,7 @@ export default function CardItem({ data }) {
             count={get(data, "rating.count")}
           />
         </div>
+
         <div className={classes.priceWrapper}>
           <PriceConvertor value={get(data, "price.selling_price", 0)} />
         </div>
