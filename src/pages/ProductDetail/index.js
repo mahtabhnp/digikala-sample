@@ -34,7 +34,7 @@ export default function ProductDetail() {
     fetchData();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [productId]);
   return (
     <Fragment>
       {isLoading && <Loader />}
